@@ -1,0 +1,430 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background: #f5deb3;
+}
+
+/* INTRO VIDEO */
+
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    overflow: hidden;
+    background: black;
+}
+
+#videoIntro {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* SECCIÓN PRINCIPAL */
+
+#menuPrincipal {
+    display: none;
+    text-align: center;
+    padding: 40px;
+    background: #fff8dc;
+    min-height: 100vh;
+    border: 20px solid transparent;
+    border-image: url("marco.png") 30 round;
+    animation: aparecer 1s ease;
+}
+
+/* HEADER */
+
+header {
+    background: #8b0000;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 50px;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 20px;
+}
+
+/* BOTONES SUPERIORES */
+
+#botonesMenu {
+    margin-bottom: 30px;
+}
+
+.botonMenu {
+    background: #ff4500;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.botonMenu:hover {
+    background: #cc3700;
+    transform: scale(1.05);
+}
+
+/* BUSCADOR */
+
+#buscador {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#buscador input {
+    width: 60%;
+    max-width: 700px;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: 1px solid gray;
+    outline: none;
+}
+
+#buscador input:focus {
+    border: 2px solid orange;
+}
+
+/* ZONA DE COMIDAS */
+
+#zonaComidas {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* TARJETAS DE COMIDA */
+
+.tarjetaComida {
+    background: white;
+    width: 250px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    text-align: center;
+    display: inline-block;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.tarjetaComida:hover {
+    transform: translateY(-5px);
+}
+
+.tarjetaComida img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.tarjetaComida h3 {
+    margin-top: 15px;
+    font-size: 22px;
+}
+
+.tarjetaComida p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* FORMULARIO PEDIDO */
+
+#formularioPedido {
+    display: none;
+    background: white;
+    padding: 30px;
+    width: 400px;
+    margin: 30px auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+#formularioPedido input,
+#formularioPedido select {
+    width: 90%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+#formularioPedido button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    background: #ff4500;
+    color: white;
+    font-weight: bold;
+}
+
+#formularioPedido button:hover {
+    background: #cc3700;
+}
+
+/* SECCIONES GENERALES */
+
+#seccionAcerca,
+#seccionMision,
+#seccionContacto,
+#zonaComidas 
+   #zonaComidas {
+    background: rgba(255, 255, 255, 0.88);
+    padding: 40px;
+    margin: 60px auto;
+    width: 75%;
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.20);
+    animation: aparecer 0.6s ease;
+}
+
+/* TÍTULOS */
+
+#seccionAcerca h1,
+#seccionMision h1,
+#seccionContacto h1 {
+    color: #8b0000;
+    margin-bottom: 25px;
+    font-size: 40px;
+}
+
+/* SUBTÍTULOS */
+
+#seccionMision h2 {
+    color: #ff4500;
+    margin-top: 25px;
+}
+
+/* PÁRRAFOS */
+
+#seccionMision p,
+#seccionContacto p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* EQUIPO DE TRABAJO */
+
+.equipoTrabajo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 40px;
+}
+
+.miembroEquipo {
+    background: white;
+    width: 270px;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.miembroEquipo:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.25);
+}
+
+.miembroEquipo img {
+    width: 210px;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.miembroEquipo h2 {
+    margin-top: 18px;
+    font-size: 24px;
+    color: #8b0000;
+}
+
+.miembroEquipo p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* FOOTER PROFESIONAL */
+
+footer {
+    background: #8b0000;
+    padding: 30px;
+    margin-top: 60px;
+    text-align: center;
+    border-top: 6px solid #ff4500;
+}
+
+/* BOTONES INFERIORES */
+
+footer button {
+    background: white;
+    color: #8b0000;
+    border: 2px solid white;
+    padding: 16px 32px;
+    margin: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    min-width: 180px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+}
+
+footer button:hover {
+    background: #ff4500;
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0px 8px 18px rgba(0,0,0,0.25);
+}
+
+/* ANIMACIÓN */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ========================= */
+/* DETALLES PREMIUM PRO */
+/* ========================= */
+
+/* Fondo general más elegante */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    background-image: url("fondo.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Títulos más llamativos */
+
+h1 {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+/* Tarjetas más premium */
+
+.tarjetaComida {
+    border: 2px solid rgba(255, 69, 0, 0.1);
+    backdrop-filter: blur(8px);
+}
+
+.tarjetaComida:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0px 12px 25px rgba(0,0,0,0.25);
+}
+
+/* Precio más llamativo */
+
+.tarjetaComida p {
+    color: #8b0000;
+    font-size: 20px;
+}
+
+/* Formulario más elegante */
+
+#formularioPedido {
+    border: 2px solid rgba(255, 69, 0, 0.15);
+}
+
+#formularioPedido h2 {
+    color: #8b0000;
+    margin-bottom: 20px;
+}
+
+/* Inputs más modernos */
+
+#formularioPedido input,
+#formularioPedido select {
+    transition: 0.3s;
+}
+
+#formularioPedido input:focus,
+#formularioPedido select:focus {
+    border: 2px solid #ff4500;
+    box-shadow: 0px 0px 10px rgba(255,69,0,0.2);
+}
+
+/* Footer más fuerte */
+
+footer {
+    box-shadow: 0px -6px 20px rgba(0,0,0,0.15);
+}
+
+/* Botones footer más premium */
+
+footer button:hover {
+    transform: translateY(-6px) scale(1.03);
+}
+
+/* Equipo de trabajo más elegante */
+
+.miembroEquipo {
+    border: 2px solid rgba(139, 0, 0, 0.08);
+}
+
+.miembroEquipo:hover {
+    transform: translateY(-10px);
+}
+
+/* Links contacto */
+
+#seccionContacto a {
+    text-decoration: none;
+    color: #8b0000;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#seccionContacto a:hover {
+    color: #ff4500;
+    text-decoration: underline;
+}
